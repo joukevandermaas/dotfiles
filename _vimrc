@@ -5,12 +5,12 @@ execute pathogen#infect()
 
 " Load color scheme (depends on pathogen)
 syntax enable
-" set background=dark
 colorscheme badwolf
 set lazyredraw " only redraw when needed
 set ttyfast
 
 set spell spelllang=en_us " spell checking rules
+set noswapfile
 
 let mapleader="\<space>"
 set clipboard=unnamed " Allow copy/paste from windows clipboard using y/p
@@ -67,6 +67,8 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+noremap   h     <NOP>
+noremap   l   <NOP>
 
 " History and other useful things related to temp files
 set history=1000         " remember more commands and search history
@@ -77,4 +79,4 @@ set noswapfile
 
 " Useful leader shortcuts
 noremap <leader><leader> :w<CR>
-
+noremap <leader>f gqip

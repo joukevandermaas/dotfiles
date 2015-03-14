@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/volume
+~MSle0~/backupdir
 
 # Last Substitute Search Pattern:
 ~MSle0&\r
@@ -18,27 +18,39 @@ $ \r
 
 # Command Line History (newest to oldest):
 :q
-:bw
+:w!
+:w!q
+:e ~/_vimrc
+:e ~\_vimrc
+:w
+:q!
+:wq
+:source ~/_vimrc
+:source .
+:bn
+:w D:\Projects\Blogposts\1.md
+:w D:\Projects\Blog\1.md
+:bp
 :ls
+:listbuffer
+:bufferlist
+:buffer
+:bw
+:e ~\_vsvimrc
+:source
 :help help
 :h buffers
 :e logic.js
 :b
-:e ~\_vimrc
-:e ~\_vsvimrc
 :e ~/_vsvim
 :new
-:bn
 :bo
-:wq
 :e ~\_gvimrc
 :e ~\gvimrc
 :~\_gvimrc
 :e ~\characters.txt
 :e ~\c
 :w ~\characters.txt
-:e ~/_vimrc
-:w
 :0
 :%norm A 
 :s/\r/ \r/g
@@ -182,7 +194,6 @@ $ \r
 :!pdflatex
 :!bibtex usenix
 :.!bibtex usenix
-:w!
 :w ~/todo.txt
 :%s/ //g
 :%s/ //gc
@@ -229,7 +240,6 @@ $ \r
 :%s/key/r
 :%s/r/key
 :%s/possible(suffer_from_skin)/symptom(suffer_from_skin)/g
-:q!
 :se
 :tabnew ..\program.py
 :tabp 2
@@ -390,6 +400,8 @@ $ \r
 :!biber fullReportB
 
 # Search String History (newest to oldest):
+?/backup
+?/backupdir
 ?/volume
 ?/button
 ?/on_size
@@ -533,31 +545,33 @@ $ \r
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	{
-	            for(int i = 0; i < count; i++)
-	                fb.VolumeUp();
-	        }
-"1	LINE	0
-	
-"2	LINE	0
-	        else fb.VolumeDown();
+"0	LINE	0
+	noremap   <Up>     <NOP>
+	noremap   <Down>   <NOP>
+	noremap   <Left>   <NOP>
+	noremap   <Right>  <NOP>
+"1	BLOCK	5
+	/.vim/
+	/.vim/
+	/.vim/
+"2	BLOCK	0
+	~
+	~
+	~
 "3	LINE	0
-	        var vu = function() {
+	noremap   k  <NOP>
 "4	LINE	0
-	
+	noremap   j   <NOP>
 "5	LINE	0
-	}
+	set 
 "6	LINE	0
-	        gr.DrawRect(this.x, this.y,
-	                this.w, this.h, 1, 
-	                g_textcolor);
+	" set background=dark
 "7	LINE	0
-	noremap <leader>f :vsc Edit.FormatDocument<CR>
+	
 "8	LINE	0
 	
 "9	LINE	0
-	
+	        else fb.VolumeDown();
 "a	CHAR	0
 	
 	  pastetoggle=<F2>
@@ -569,18 +583,49 @@ $ \r
 "w	CHAR	0
 	:q€kbwwwwwwi:wi€ýc€ýb€ý,€ý.
 ""-	CHAR	0
-	int
+	Program Files
 
 # File marks:
-'0  1  0  D:\Downloads\quotes.csv
-'1  163  0  D:\Downloads\foo_uie_wsh_panel_mod-1.5.6\jscript.api
-'2  210  3  D:\Program Files (x86)\Vim\vim74\doc\helphelp.txt
-'3  255  18  D:\Projects\wsh_panel\controls.js
-'4  16  31  D:\Projects\wsh_panel\logic.js
-'5  439  0  D:\Projects\wsh_panel\controls.js
-'6  1  0  ~\_vimrc
+'0  1  0  D:\Projects\Blogposts\1.md
+'1  3  6  D:\Projects\Blogposts\1.md
+'2  15  26  ~\_vimrc
+'3  6  0  D:\Projects\Blog\1.md
+'4  55  0  ~\Documents\WindowsPowerShell\profile.ps1
+'5  63  70  ~\Documents\WindowsPowerShell\profile.ps1
+'6  43  0  D:\Projects\monokai\posh-monokai\posh-monokai.ps1
+'7  1  0  D:\Downloads\quotes.csv
+'8  163  0  D:\Downloads\foo_uie_wsh_panel_mod-1.5.6\jscript.api
+'9  210  3  D:\Program Files (x86)\Vim\vim74\doc\helphelp.txt
 
 # Jumplist (newest first):
+-'  1  0  D:\Projects\Blogposts\1.md
+-'  3  6  D:\Projects\Blogposts\1.md
+-'  15  26  ~\_vimrc
+-'  1  0  ~\_vimrc
+-'  6  0  D:\Projects\Blog\1.md
+-'  8  0  ~\_vimrc
+-'  2  0  ~\_vimrc
+-'  5  0  ~\_vimrc
+-'  11  0  ~\_vimrc
+-'  16  0  ~\_vimrc
+-'  19  0  ~\_vimrc
+-'  21  0  ~\_vimrc
+-'  33  0  ~\_vimrc
+-'  43  0  ~\_vimrc
+-'  52  0  ~\_vimrc
+-'  59  0  ~\_vimrc
+-'  69  0  ~\_vimrc
+-'  62  0  ~\_vimrc
+-'  3  73  D:\Projects\Blog\1.md
+-'  4  28  D:\Projects\Blog\1.md
+-'  2  52  D:\Projects\Blog\1.md
+-'  1  0  D:\Projects\Blog\1.md
+-'  7  0  D:\Projects\Blog\1.md
+-'  55  0  ~\Documents\WindowsPowerShell\profile.ps1
+-'  1  0  ~\Documents\WindowsPowerShell\profile.ps1
+-'  63  70  ~\Documents\WindowsPowerShell\profile.ps1
+-'  43  0  D:\Projects\monokai\posh-monokai\posh-monokai.ps1
+-'  1  0  D:\Projects\monokai\posh-monokai\posh-monokai.ps1
 -'  1  0  D:\Downloads\quotes.csv
 -'  163  0  D:\Downloads\foo_uie_wsh_panel_mod-1.5.6\jscript.api
 -'  1  0  D:\Downloads\foo_uie_wsh_panel_mod-1.5.6\jscript.api
@@ -611,8 +656,6 @@ $ \r
 -'  139  26  D:\Projects\wsh_panel\logic.js
 -'  1  0  D:\Projects\wsh_panel\logic.js
 -'  439  0  D:\Projects\wsh_panel\controls.js
--'  1  0  ~\_vimrc
--'  9  37  ~\_vsvimrc
 -'  1  0  ~\_vsvim
 -'  1  7  ~\characters.txt
 -'  12  0  ~\characters.txt
@@ -628,13 +671,11 @@ $ \r
 -'  1  0  ~\AppData\Local\Temp\sound.bat
 -'  43  0  D:\Projects\Awesan.VsEmber\Awesan.VsEmber.Core\Ember.cs
 -'  1  0  D:\Projects\Awesan.VsEmber\Awesan.VsEmber.Core\Ember.cs
--'  1  0  ~\_vsvimrc
 -'  1  0  D:\Projects\ember-cli-tests\test1\app\controller1\controller.js
 -'  3  23  D:\Projects\ember-cli-tests\test1\app\controller1\controller.js
 -'  195  7  ~\Documents\Rainmeter\Skins\Muziko\Muziko.ini
 -'  1  0  ~\Documents\Rainmeter\Skins\Muziko\Muziko.ini
 -'  1  0  ~\Documents\Rainmeter\Skins\Minimal Time, Date, Weather\Minimal Time, Date, Weather.ini
--'  7  52  ~\_vsvimrc
 -'  1  0  ~\AppData\Roaming\npm\ember.cmd
 -'  1  0  ~\danuta.txt
 -'  96  4  D:\OneDrive\Documents\CV\cv_en.tex
@@ -642,44 +683,145 @@ $ \r
 -'  93  0  ~\vimfiles\bundle\vim-colors-solarized\README.mkd
 -'  1  0  ~\vimfiles\bundle\vim-colors-solarized\README.mkd
 -'  55  0  D:\Downloads\vim-colors-solarized-master\vim-colors-solarized-master\README.mkd
--'  1  0  D:\Downloads\vim-colors-solarized-master\vim-colors-solarized-master\README.mkd
--'  1  0  D:\Program Files (x86)\Vim\vim74\doc\intro.txt
--'  139  8  D:\Projects\wsh_panel\controls.js
--'  507  25  D:\Projects\wsh_panel\controls.js
--'  481  24  D:\Projects\wsh_panel\controls.js
--'  483  47  D:\Projects\wsh_panel\controls.js
--'  369  13  D:\Projects\wsh_panel\controls.js
--'  30  16  D:\OneDrive\Documents\CV\danuta\cv_danuta_my_soulmate.tex
--'  1  0  D:\OneDrive\Documents\CV\danuta\cv_danuta_my_soulmate.tex
--'  19  0  D:\OneDrive\Documents\CV\cv_en.tex
--'  401  30  D:\Projects\wsh_panel\controls.js
--'  364  32  D:\Projects\wsh_panel\controls.js
--'  136  1  D:\Projects\wsh_panel\controls.js
--'  117  18  D:\Projects\wsh_panel\logic.js
--'  100  0  D:\Projects\wsh_panel\logic.js
--'  51  26  D:\Projects\wsh_panel\logic.js
--'  8  0  D:\Projects\wsh_panel\logic.js
--'  15  0  D:\Projects\wsh_panel\logic.js
--'  405  0  D:\Projects\wsh_panel\controls_setup.js
--'  422  0  D:\Projects\wsh_panel\controls_setup.js
--'  410  34  D:\Projects\wsh_panel\controls_setup.js
--'  1  0  D:\Projects\wsh_panel\controls_setup.js
--'  58  1  D:\Downloads\Torrents\Alien Skin Exposure 6.0.0.1110 (32-64 bit XForce) [ChingLiu]\ChingLiu.Install.Notes.nfo
--'  1  1  D:\Downloads\Torrents\Alien Skin Exposure 6.0.0.1110 (32-64 bit XForce) [ChingLiu]\ChingLiu.Install.Notes.nfo
--'  459  38  D:\Projects\wsh_panel\controls_setup.js
--'  465  31  D:\Projects\wsh_panel\controls_setup.js
--'  327  8  D:\Projects\wsh_panel\controls_setup.js
--'  334  30  D:\Projects\wsh_panel\controls_setup.js
--'  335  29  D:\Projects\wsh_panel\controls_setup.js
--'  333  36  D:\Projects\wsh_panel\controls_setup.js
--'  309  4  D:\Projects\wsh_panel\controls_setup.js
--'  320  48  D:\Projects\wsh_panel\controls_setup.js
--'  255  18  D:\Projects\wsh_panel\controls.js
--'  210  3  D:\Program Files (x86)\Vim\vim74\doc\helphelp.txt
--'  16  0  D:\Program Files (x86)\Vim\vim74\doc\windows.txt
--'  1  0  D:\Program Files (x86)\Vim\vim74\doc\windows.txt
+-'  6  0  D:\Projects\Blog\1.md
+-'  6  0  D:\Projects\Blog\1.md
+-'  6  0  D:\Projects\Blog\1.md
+-'  15  46  ~\_vimrc
+-'  1  0  ~\_vimrc
+-'  6  0  D:\Projects\Blog\1.md
+-'  8  0  ~\_vimrc
+-'  2  0  ~\_vimrc
+-'  5  0  ~\_vimrc
+-'  11  0  ~\_vimrc
+-'  13  13  ~\_vimrc
+-'  1  0  ~\_vimrc
 
 # History of marks within files (newest to oldest):
+
+> D:\Projects\Blogposts\1.md
+	"	1	0
+	^	3	71
+	.	3	70
+	+	3	131
+	+	3	24
+	+	1	151
+	+	1	226
+	+	1	226
+	+	3	70
+
+> ~\_vimrc
+	"	13	13
+	^	13	14
+	.	13	13
+	+	75	0
+	+	77	0
+	+	77	0
+	+	78	0
+	+	78	0
+	+	1	0
+	+	4	0
+	+	3	30
+	+	2	0
+	+	14	0
+	+	1	5
+	+	4	0
+	+	6	40
+	+	3	9
+	+	11	0
+	+	74	0
+	+	7	0
+	+	8	20
+	+	7	12
+	+	21	47
+	+	23	29
+	+	28	0
+	+	52	0
+	+	42	0
+	+	24	0
+	+	42	0
+	+	25	0
+	+	46	0
+	+	26	0
+	+	20	41
+	+	28	0
+	+	32	23
+	+	41	15
+	+	50	17
+	+	32	21
+	+	36	10
+	+	37	13
+	+	30	55
+	+	40	0
+	+	48	70
+	+	15	15
+	+	48	67
+	+	51	13
+	+	53	3
+	+	51	28
+	+	52	77
+	+	53	98
+	+	54	10
+	+	55	44
+	+	58	12
+	+	59	12
+	+	58	34
+	+	69	0
+	+	61	0
+	+	60	19
+	+	74	0
+	+	77	0
+	+	70	54
+	+	72	0
+	+	75	0
+	+	33	0
+	+	72	0
+	+	38	0
+	+	77	0
+	+	12	47
+	+	8	19
+	+	11	0
+	+	9	0
+	+	10	10
+	+	9	39
+	+	38	54
+	+	8	18
+	+	76	30
+	+	55	21
+	+	8	18
+	+	8	1
+	+	82	21
+	+	8	0
+	+	14	0
+	+	14	0
+	+	14	13
+	+	72	0
+	+	14	0
+	+	14	46
+	+	14	44
+	+	14	11
+	+	14	14
+	+	14	14
+	+	14	44
+	+	14	46
+	+	14	45
+	+	14	48
+	+	14	44
+	+	14	29
+	+	14	27
+	+	14	0
+	+	14	51
+	+	14	48
+	+	14	0
+	+	13	13
+
+> ~\Documents\WindowsPowerShell\profile.ps1
+	"	55	0
+	^	63	71
+	.	63	70
+	+	63	70
+
+> D:\Projects\monokai\posh-monokai\posh-monokai.ps1
+	"	43	0
 
 > D:\Downloads\quotes.csv
 	"	1	0
@@ -937,111 +1079,6 @@ $ \r
 	+	15	0
 	+	17	0
 	+	16	0
-
-> ~\_vimrc
-	"	1	0
-	^	8	2
-	.	8	1
-	+	79	89
-	+	79	40
-	+	28	4
-	+	28	12
-	+	15	0
-	+	15	0
-	+	15	0
-	+	76	34
-	+	52	20
-	+	15	0
-	+	18	0
-	+	28	0
-	+	1	37
-	+	16	72
-	+	18	74
-	+	28	0
-	+	34	0
-	+	28	0
-	+	74	0
-	+	76	0
-	+	76	0
-	+	76	0
-	+	76	0
-	+	76	0
-	+	77	0
-	+	79	0
-	+	79	0
-	+	80	0
-	+	80	0
-	+	1	0
-	+	4	0
-	+	3	30
-	+	2	0
-	+	14	0
-	+	1	5
-	+	4	0
-	+	6	40
-	+	3	9
-	+	12	0
-	+	76	0
-	+	7	0
-	+	9	20
-	+	7	12
-	+	21	47
-	+	23	29
-	+	28	0
-	+	52	0
-	+	42	0
-	+	24	0
-	+	42	0
-	+	25	0
-	+	46	0
-	+	26	0
-	+	20	41
-	+	28	0
-	+	32	23
-	+	41	15
-	+	50	17
-	+	32	21
-	+	36	10
-	+	37	13
-	+	30	55
-	+	40	0
-	+	48	70
-	+	15	15
-	+	48	67
-	+	51	13
-	+	53	3
-	+	51	28
-	+	52	77
-	+	53	98
-	+	54	10
-	+	55	44
-	+	58	12
-	+	59	12
-	+	58	34
-	+	69	0
-	+	61	0
-	+	60	19
-	+	76	0
-	+	79	0
-	+	70	54
-	+	74	0
-	+	77	0
-	+	33	0
-	+	74	0
-	+	38	0
-	+	79	0
-	+	13	47
-	+	8	19
-	+	12	0
-	+	10	0
-	+	11	10
-	+	10	39
-	+	38	54
-	+	8	18
-	+	78	30
-	+	55	21
-	+	9	18
-	+	8	1
 
 > D:\Projects\ember-cli-tests\test1\app\controllers\test45.js
 	"	4	0
@@ -2396,17 +2433,3 @@ $ \r
 	^	2	12
 	.	2	11
 	+	2	11
-
-> D:\OneDrive\Documents\code\website\bin\www
-	"	1	0
-	.	1	0
-	+	1	0
-
-> ~\_ideavimrc
-	"	132	11
-	^	132	12
-	.	132	11
-	+	132	11
-
-> D:\Downloads\foovert_3\foovert\foovert.fcl
-	"	1	0
