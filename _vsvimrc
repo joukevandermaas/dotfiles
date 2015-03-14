@@ -1,0 +1,17 @@
+let mapleader="\<space>"
+
+noremap <leader><leader> :w<CR>
+
+noremap <leader>d :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+noremap <leader>i :vsc ReSharper.ReSharper_GotoImplementation<CR>
+noremap <leader>u :vsc ReSharper.ReSharper_FindUsages<CR>
+
+set backspace=start " fix a stupid bug
+
+noremap h <NOP>
+noremap l <NOP>
+
+noremap <leader>g :vsc Edit.CollapsetoDefinitions<CR>
+noremap <leader>t za
+
+noremap <leader>f :vsc Edit.FormatDocument<CR>
