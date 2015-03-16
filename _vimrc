@@ -39,6 +39,10 @@ set novisualbell           " don't flash screen on noop
 set noerrorbells         " don't beep
 set backspace=indent,eol,start " make backspace work like it should out of the box
 
+" Markdown stuff
+let g:vim_markdown_folding_disabled=1
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+
 " search options
 set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
