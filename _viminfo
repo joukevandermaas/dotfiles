@@ -17,6 +17,7 @@
 $ \r
 
 # Command Line History (newest to oldest):
+:wq
 :q
 :w!
 :w!q
@@ -24,7 +25,6 @@ $ \r
 :e ~\_vimrc
 :w
 :q!
-:wq
 :source ~/_vimrc
 :source .
 :bn
@@ -545,11 +545,8 @@ $ \r
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	noremap   <Up>     <NOP>
-	noremap   <Down>   <NOP>
-	noremap   <Left>   <NOP>
-	noremap   <Right>  <NOP>
+""0	LINE	0
+	autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
 "1	BLOCK	5
 	/.vim/
 	/.vim/
@@ -582,22 +579,24 @@ $ \r
 	a€kli quadratic€kD:w€kdp€kb€krxp€kb€krx€kl€ku€kuY2jpo{Loadfactor/lookup time for the \cd{java.util.Hashtable}€kl€kr}:w€k5€ýb€ýb€ý,€ý.a%€ku€ku€ku%€ku€ku€ku%€ku€ku€ku%`1€ýc€ýb
 "w	CHAR	0
 	:q€kbwwwwwwi:wi€ýc€ýb€ý,€ý.
-""-	CHAR	0
+"-	CHAR	0
 	Program Files
 
 # File marks:
-'0  1  0  D:\Projects\Blogposts\1.md
-'1  3  6  D:\Projects\Blogposts\1.md
-'2  15  26  ~\_vimrc
-'3  6  0  D:\Projects\Blog\1.md
-'4  55  0  ~\Documents\WindowsPowerShell\profile.ps1
-'5  63  70  ~\Documents\WindowsPowerShell\profile.ps1
-'6  43  0  D:\Projects\monokai\posh-monokai\posh-monokai.ps1
-'7  1  0  D:\Downloads\quotes.csv
-'8  163  0  D:\Downloads\foo_uie_wsh_panel_mod-1.5.6\jscript.api
-'9  210  3  D:\Program Files (x86)\Vim\vim74\doc\helphelp.txt
+'0  22  40  ~\old vimfiles\_vimrc
+'1  1  0  D:\Projects\Blogposts\1.md
+'2  3  6  D:\Projects\Blogposts\1.md
+'3  15  26  ~\_vimrc
+'4  6  0  D:\Projects\Blog\1.md
+'5  55  0  ~\Documents\WindowsPowerShell\profile.ps1
+'6  63  70  ~\Documents\WindowsPowerShell\profile.ps1
+'7  43  0  D:\Projects\monokai\posh-monokai\posh-monokai.ps1
+'8  1  0  D:\Downloads\quotes.csv
+'9  163  0  D:\Downloads\foo_uie_wsh_panel_mod-1.5.6\jscript.api
 
 # Jumplist (newest first):
+-'  22  40  ~\old vimfiles\_vimrc
+-'  1  0  ~\old vimfiles\_vimrc
 -'  1  0  D:\Projects\Blogposts\1.md
 -'  3  6  D:\Projects\Blogposts\1.md
 -'  15  26  ~\_vimrc
@@ -698,26 +697,15 @@ $ \r
 
 # History of marks within files (newest to oldest):
 
-> D:\Projects\Blogposts\1.md
-	"	1	0
-	^	3	71
-	.	3	70
-	+	3	131
-	+	3	24
-	+	1	151
-	+	1	226
-	+	1	226
-	+	3	70
+> ~\old vimfiles\_vimrc
+	"	22	40
 
 > ~\_vimrc
-	"	13	13
-	^	13	14
-	.	13	13
-	+	75	0
-	+	77	0
-	+	77	0
-	+	78	0
-	+	78	0
+	"	42	0
+	^	42	16
+	.	42	0
+	+	82	0
+	+	82	0
 	+	1	0
 	+	4	0
 	+	3	30
@@ -728,55 +716,55 @@ $ \r
 	+	6	40
 	+	3	9
 	+	11	0
-	+	74	0
+	+	78	0
 	+	7	0
 	+	8	20
 	+	7	12
 	+	21	47
 	+	23	29
 	+	28	0
-	+	52	0
-	+	42	0
-	+	24	0
-	+	42	0
-	+	25	0
+	+	56	0
 	+	46	0
+	+	24	0
+	+	46	0
+	+	25	0
+	+	50	0
 	+	26	0
 	+	20	41
 	+	28	0
 	+	32	23
-	+	41	15
-	+	50	17
+	+	45	15
+	+	54	17
 	+	32	21
 	+	36	10
 	+	37	13
 	+	30	55
 	+	40	0
-	+	48	70
+	+	52	70
 	+	15	15
-	+	48	67
-	+	51	13
-	+	53	3
-	+	51	28
-	+	52	77
-	+	53	98
-	+	54	10
-	+	55	44
-	+	58	12
-	+	59	12
-	+	58	34
-	+	69	0
-	+	61	0
-	+	60	19
-	+	74	0
-	+	77	0
-	+	70	54
-	+	72	0
-	+	75	0
+	+	52	67
+	+	55	13
+	+	57	3
+	+	55	28
+	+	56	77
+	+	57	98
+	+	58	10
+	+	59	44
+	+	62	12
+	+	63	12
+	+	62	34
+	+	73	0
+	+	65	0
+	+	64	19
+	+	78	0
+	+	81	0
+	+	74	54
+	+	76	0
+	+	79	0
 	+	33	0
-	+	72	0
+	+	76	0
 	+	38	0
-	+	77	0
+	+	81	0
 	+	12	47
 	+	8	19
 	+	11	0
@@ -785,16 +773,16 @@ $ \r
 	+	9	39
 	+	38	54
 	+	8	18
-	+	76	30
-	+	55	21
+	+	80	30
+	+	59	21
 	+	8	18
 	+	8	1
-	+	82	21
+	+	86	21
 	+	8	0
 	+	14	0
 	+	14	0
 	+	14	13
-	+	72	0
+	+	76	0
 	+	14	0
 	+	14	46
 	+	14	44
@@ -813,6 +801,20 @@ $ \r
 	+	14	48
 	+	14	0
 	+	13	13
+	+	43	0
+	+	44	0
+	+	42	0
+
+> D:\Projects\Blogposts\1.md
+	"	1	0
+	^	3	71
+	.	3	70
+	+	3	131
+	+	3	24
+	+	1	151
+	+	1	226
+	+	1	226
+	+	3	70
 
 > ~\Documents\WindowsPowerShell\profile.ps1
 	"	55	0
@@ -2427,9 +2429,3 @@ $ \r
 
 > D:\Dropbox\School\ILU\assignment1.tex
 	"	1	0
-
-> ~\.ideavimrc
-	"	2	11
-	^	2	12
-	.	2	11
-	+	2	11
