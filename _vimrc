@@ -11,6 +11,7 @@ set ttyfast
 
 set spell spelllang=en_us " spell checking rules
 set noswapfile
+set linebreak " break on words
 
 let mapleader="\<space>"
 set clipboard=unnamed " Allow copy/paste from windows clipboard using y/p
@@ -80,3 +81,4 @@ set noswapfile
 " Useful leader shortcuts
 noremap <leader><leader> :w<CR>
 noremap <leader>f gqip
+noremap <leader>s :setlocal spell! spelllang=en_us<CR>
