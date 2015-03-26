@@ -9,7 +9,9 @@ colorscheme badwolf
 set lazyredraw " only redraw when needed
 set ttyfast
 
-set spell spelllang=en_us " spell checking rules
+au FileType markdown set spell spelllang=en_us " spell checking rules
+au FileType latex set spell spelllang=en_us " spell checking rules
+
 set noswapfile
 set linebreak " break on words
 
