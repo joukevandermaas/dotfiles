@@ -86,3 +86,4 @@ set noswapfile
 noremap <leader><leader> :w<CR>
 noremap <leader>f gqip
 noremap <leader>s :setlocal spell! spelllang=en_us<CR>
+noremap <leader>` :q<CR>

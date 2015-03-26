@@ -15,3 +15,5 @@ noremap <leader>g :vsc Edit.CollapsetoDefinitions<CR>
 noremap <leader>t za
 
 noremap <leader>f :vsc Edit.FormatDocument<CR>
+
+noremap <leader>` :vsc Window.CloseToolWindow<CR>
