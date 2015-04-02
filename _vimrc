@@ -9,6 +9,7 @@ colorscheme badwolf
 set lazyredraw " only redraw when needed
 set ttyfast
 
+filetype plugin on
 au FileType markdown set spell spelllang=en_us " spell checking rules
 au FileType latex set spell spelllang=en_us " spell checking rules
 
@@ -45,6 +46,17 @@ set backspace=indent,eol,start " make backspace work like it should out of the b
 " Markdown stuff
 let g:vim_markdown_folding_disabled=1
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_us
+
+"latex stuff
+set shellslash
+let g:tex_flavor='latex'
+au FileType tex set sw=2 " indent smaller
+au FileType tex set iskeyword +=:
+au FileType tex TTarget pdf
+au FileType tex setlocal spell spelllang=en_us
+let Tex_FoldedSections=""
+let Tex_FoldedEnvironments=""
+let Tex_FoldedMisc=""
 
 " search options
 set showmatch     " set show matching parenthesis
