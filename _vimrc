@@ -35,6 +35,7 @@ filetype indent on " Load filetype specific indent files
 
 " Configure UI options
 set mouse=a
+set ruler
 set number
 set relativenumber
 set showcmd
@@ -86,8 +87,6 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
-noremap   h     <NOP>
-noremap   l   <NOP>
 
 " History and other useful things related to temp files
 set history=1000         " remember more commands and search history
