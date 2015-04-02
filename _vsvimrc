@@ -8,9 +8,6 @@ noremap <leader>u :vsc ReSharper.ReSharper_FindUsages<CR>
 
 set backspace=start " fix a stupid bug
 
-noremap h <NOP>
-noremap l <NOP>
-
 noremap <leader>g :vsc Edit.CollapsetoDefinitions<CR>
 noremap <leader>t za
 
