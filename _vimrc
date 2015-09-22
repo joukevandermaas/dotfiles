@@ -45,7 +45,7 @@ nnoremap <leader>/ :nohlsearch<CR> " remove highlights with <space>/
 " folds are useful
 set foldenable " enable folds
 set foldmethod=syntax " fold based on syntax (will not work for all filetypes)
-set foldlevelstart=4 " start folding at level 3 (so you don't get entirely folded files at startup)
+set foldlevelstart=4 " start folding at this level
 set foldnestmax=7 " Don't allow crazy nested folds
 
 " Movement stuff
@@ -65,10 +65,14 @@ noremap   <Right>  <NOP>
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore+=*\\tmp\\*,*\\dist\\*,*\\bower_components\\*,*\\node_modules\\*
+set noswapfile
+set undofile                " Save undo's after file closes
+set undodir=$HOME\\vimfiles\\undo " where to save undo histories
 
 " Useful leader shortcuts
 nnoremap <leader>t za
-nnoremap <leader>tt zR
+nnoremap <leader>y zR
 nnoremap <leader><leader> :w<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>` :q<CR>

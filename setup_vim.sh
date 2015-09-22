@@ -1,7 +1,10 @@
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+cp _vimrc ~/_vimrc
+cp _gvimrc ~/_gvimrc
+cp _vsvimrc ~/_vsvimrc
+mkdir -p ~/vimfiles/autoload ~/.vim/bundle && \
+curl -LSso ~/vimfiles/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-cd ~/.vim/bundle
+cd ~/vimfiles/bundle
 
 git clone https://github.com/ntpeters/vim-better-whitespace
 git clone https://github.com/mustache/vim-mustache-handlebars
@@ -14,3 +17,5 @@ git clone https://github.com/Raimondi/delimitMate
 git clone https://github.com/nathanaelkane/vim-indent-guides
 git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/jelera/vim-javascript-syntax
+git clone https://github.com/tpope/vim-surround
+git clone https://github.com/tpope/vim-repeat

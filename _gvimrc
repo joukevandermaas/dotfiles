@@ -1,4 +1,4 @@
-set gfn=Consolas:h12:cANSI
+set gfn=Consolas:h15:cANSI
 set lines=35 columns=150
 set guioptions-=m " remove menu bar
 set guioptions-=T " remove tool bar
