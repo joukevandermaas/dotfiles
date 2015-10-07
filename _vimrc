@@ -6,7 +6,7 @@ colorscheme badwolf
 set linebreak " break on words
 
 let mapleader="\<space>"
-set clipboard=unnamedplus " Allow copy/paste from windows clipboard using y/p
+set clipboard=unnamed " Allow copy/paste from windows clipboard using y/p
 
 set hidden  " Hides old buffers with unsaved changes when opening a new one
 
