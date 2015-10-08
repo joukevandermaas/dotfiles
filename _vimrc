@@ -67,14 +67,27 @@ set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set wildignore+=*\\tmp\\*,*\\dist\\*,*\\bower_components\\*,*\\node_modules\\*
 set noswapfile
+set nobackup
+set nowritebackup
 set undofile                " Save undo's after file closes
 set undodir=$HOME\\vimfiles\\undo " where to save undo histories
 
 " Useful leader shortcuts
 nnoremap <leader>t za
-nnoremap <leader>y zR
 nnoremap <leader><leader> :w<CR>
 nnoremap <leader>f gg=G
 nnoremap <leader>` :q<CR>
 nnoremap <leader>r :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
+
+set statusline=%q%y\ %f         " Path to the file
+set statusline+=%=        " Switch to the right side
+set statusline+=%l        " Current line
+set statusline+=/         " Separator
+set statusline+=%L        " Total lines
+set statusline+=\ [%{winnr()}]{%n}
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
