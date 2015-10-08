@@ -85,7 +85,7 @@ set statusline+=%=        " Switch to the right side
 set statusline+=%l        " Current line
 set statusline+=/         " Separator
 set statusline+=%L        " Total lines
-set statusline+=\ [%{winnr()}]{%n}
+set statusline+=\ %m[W%{winnr()}][B%n]
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
