@@ -75,7 +75,7 @@ set undodir=$HOME\\vimfiles\\undo " where to save undo histories
 " Useful leader shortcuts
 nnoremap <leader>t za
 nnoremap <leader><leader> :w<CR>
-nnoremap <leader>f gg=G
+nnoremap <leader>f gg=G''
 nnoremap <leader>` :q<CR>
 nnoremap <leader>r :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>

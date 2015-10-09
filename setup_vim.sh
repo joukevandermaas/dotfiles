@@ -19,3 +19,4 @@ git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/jelera/vim-javascript-syntax
 git clone https://github.com/tpope/vim-surround
 git clone https://github.com/tpope/vim-repeat
+git clone https://github.com/PProvost/vim-ps1
