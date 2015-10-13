@@ -80,12 +80,13 @@ nnoremap <leader>` :q<CR>
 nnoremap <leader>r :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
 
-set statusline=%q%y\ %f         " Path to the file
+set statusline=
+set statusline+=\ %f         " Path to the file
 set statusline+=%=        " Switch to the right side
-set statusline+=%l        " Current line
-set statusline+=/         " Separator
-set statusline+=%L        " Total lines
-set statusline+=\ %m[W%{winnr()}][B%n]
+set statusline+=c%c        " Current column
+set statusline+=\ %m      " is modified
+set statusline+=[B%n] " buffer number
+set statusline+=[%{fugitive#head()}] " branch
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
