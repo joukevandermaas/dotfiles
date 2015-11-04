@@ -1,4 +1,5 @@
 cp _virtualvimrc ~/_vimrc
+cp _virtualgvimrc ~/_gvimrc
 cp _gvimrc ~/_gvimrc
 cp _vsvimrc ~/_vsvimrc
 mkdir -p ~/vimfiles/autoload ~/vimfiles/bundle && \
@@ -19,7 +20,7 @@ git clone https://github.com/ntpeters/vim-better-whitespace
 git clone https://github.com/Raimondi/delimitMate
 git clone https://github.com/nathanaelkane/vim-indent-guides
 
-git clone https://github.com/mustache/vim-mustache-handlebars
+git clone https://github.com/joukevandermaas/vim-ember-hbs
 git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/jelera/vim-javascript-syntax
 git clone https://github.com/PProvost/vim-ps1

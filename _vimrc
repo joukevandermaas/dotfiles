@@ -40,7 +40,6 @@ set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
-nnoremap <leader>/ :nohlsearch<CR> " remove highlights with <space>/
 
 " folds are useful
 set foldenable " enable folds
@@ -48,9 +47,6 @@ set foldmethod=syntax " fold based on syntax (will not work for all filetypes)
 set foldlevelstart=4 " start folding at this level
 set foldnestmax=7 " Don't allow crazy nested folds
 
-" Movement stuff
-"nnoremap j gj " visual line == line
-"nnoremap k gk
 " Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -71,6 +67,7 @@ set nobackup
 set nowritebackup
 set undofile                " Save undo's after file closes
 set undodir=$HOME\\vimfiles\\undo " where to save undo histories
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " Useful leader shortcuts
 nnoremap <leader>t za
@@ -79,6 +76,7 @@ nnoremap <leader>f gg=G''
 nnoremap <leader>` :q<CR>
 nnoremap <leader>r :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
+nnoremap <silent> <leader>/ :let @/ = ""<CR>
 
 set statusline=
 set statusline+=%{expand('%:p:h:t')} " directory of current file
@@ -88,6 +86,9 @@ set statusline+=%<%{fugitive#head()} " branch
 set statusline+=\ c%c        " Current column
 set statusline+=\ %m      " is modified
 set statusline+=[B%n] " buffer number
+
+set splitbelow
+set splitright
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
