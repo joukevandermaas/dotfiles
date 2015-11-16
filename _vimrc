@@ -1,7 +1,7 @@
 execute pathogen#infect()
 
 " Load color scheme (depends on pathogen)
-colorscheme badwolf
+colorscheme jellybeans
 
 set linebreak " break on words
 

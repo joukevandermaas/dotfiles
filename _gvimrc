@@ -1,4 +1,4 @@
-set gfn=Office\ Code\ Pro\ Medium:h14
+set gfn=Office\ Code\ Pro\ Medium/14/-1/5/50/0/0/0/1/0
 set lines=35 columns=150
 set guioptions-=m " remove menu bar
 set guioptions-=T " remove tool bar
