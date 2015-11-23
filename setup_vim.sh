@@ -1,6 +1,5 @@
 cp _virtualvimrc ~/_vimrc
 cp _virtualgvimrc ~/_gvimrc
-cp _gvimrc ~/_gvimrc
 cp _vsvimrc ~/_vsvimrc
 mkdir -p ~/vimfiles/autoload ~/vimfiles/bundle && \
 curl -LSso ~/vimfiles/autoload/pathogen.vim https://tpo.pe/pathogen.vim

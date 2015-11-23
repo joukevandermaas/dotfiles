@@ -3,6 +3,14 @@ execute pathogen#infect()
 " Load color scheme (depends on pathogen)
 colorscheme jellybeans
 
+" disable italic comments
+let g:jellybeans_overrides = {
+      \ 'Comment': { 'attr': '' },
+      \ 'StatusLine': { 'attr': '' },
+      \ 'StatusLineNC': { 'attr': '' },
+      \ 'ExtraWhitespace': { 'guibg': 'b50042', 'ctermbg': '124' },
+    \}
+
 set linebreak " break on words
 
 let mapleader="\<space>"
@@ -94,3 +102,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+autocmd VimEnter * IndentGuidesEnable
