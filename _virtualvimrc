@@ -1,1 +1,3 @@
+set nocp
+
 source ~/dotfiles/_vimrc
