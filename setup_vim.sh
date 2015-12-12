@@ -15,7 +15,7 @@ git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/tpope/vim-sensible
 
 git clone https://github.com/ntpeters/vim-better-whitespace
-git clone https://github.com/Raimondi/delimitMate
+git clone https://github.com/cohama/lexima.vim
 git clone https://github.com/nathanaelkane/vim-indent-guides
 
 git clone https://github.com/joukevandermaas/vim-ember-hbs
