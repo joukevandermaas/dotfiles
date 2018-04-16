@@ -14,3 +14,5 @@ noremap <leader>t za
 noremap <leader>f :vsc Edit.FormatDocument<CR>
 
 noremap <leader>` :vsc Window.CloseToolWindow<CR>
+
+set clipboard=unnamed
