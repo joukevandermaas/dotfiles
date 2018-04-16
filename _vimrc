@@ -1,15 +1,48 @@
-execute pathogen#infect()
+filetype off
 
-" Load color scheme (depends on pathogen)
-colorscheme jellybeans
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+if !filereadable(vundle_readme)
+  echo "Installing Vundle..."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  let iCanHazVundle=0
+endif
 
-" disable italic comments
-let g:jellybeans_overrides = {
-      \ 'Comment': { 'attr': '' },
-      \ 'StatusLine': { 'attr': '' },
-      \ 'StatusLineNC': { 'attr': '' },
-      \ 'ExtraWhitespace': { 'guibg': 'b50042', 'ctermbg': '124' },
-    \}
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sensible'
+
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+
+Plugin 'joukevandermaas/vim-ember-hbs'
+Plugin 'isRuslan/vim-es6'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'PProvost/vim-ps1'
+
+Plugin 'morhetz/gruvbox'
+Plugin 'sjl/badwolf'
+Plugin 'nanotech/jellybeans.vim'
+
+call vundle#end()
+
+if iCanHazVundle == 0
+  echo "Installing Bundles"
+  :BundleInstall
+endif
+
+filetype plugin indent on
+" Vundle End, everything before this is Vundle setup"
+
+" Load color scheme 
+colorscheme badwolf
 
 set linebreak " break on words
 
@@ -30,18 +63,15 @@ set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 filetype indent on " Load filetype specific indent files
 
-" Configure UI options
 set mouse=a
 set ruler
 set number
-set relativenumber
 set showcmd
 set cursorline
 set novisualbell           " don't flash screen on noop
 set noerrorbells         " don't beep
 set backspace=indent,eol,start " make backspace work like it should out of the box
 
-" search options
 set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase,
@@ -49,62 +79,25 @@ set smartcase     " ignore case if search pattern is all lowercase,
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
-" folds are useful
-set foldenable " enable folds
-set foldmethod=syntax " fold based on syntax (will not work for all filetypes)
-set foldlevelstart=4 " start folding at this level
-set foldnestmax=7 " Don't allow crazy nested folds
-
-" Disable arrow keys
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
 noremap  <buffer> <silent> k gk
 noremap  <buffer> <silent> j gj
 noremap  <buffer> <silent> 0 g0
 noremap  <buffer> <silent> $ g$
 
-" History and other useful things related to temp files
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set wildignore+=*\\tmp\\*,*\\dist\\*,*\\bower_components\\*,*\\node_modules\\*
+set wildignore+=*/tmp/*,*/dist/*,*/bower_components/*,*/node_modules/*
 set noswapfile
 set nobackup
 set nowritebackup
 set undofile                " Save undo's after file closes
-set undodir=$HOME\\vimfiles\\undo " where to save undo histories
+set undodir=$HOME/vimfiles/undo " where to save undo histories
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" Useful leader shortcuts
 nnoremap <leader>t za
 nnoremap <leader><leader> :w<CR>
 nnoremap <leader>f gg=G''
 nnoremap <leader>` :q<CR>
-nnoremap <leader>r :NERDTreeToggle<CR>
 nnoremap <leader>o :CtrlP<CR>
 nnoremap <silent> <leader>/ :let @/ = ""<CR>
-
-set statusline=
-set statusline+=%{expand('%:p:h:t')} " directory of current file
-set statusline+=\\%t         " name of the file
-set statusline+=%=\        " Switch to the right side
-set statusline+=%<%{fugitive#head()} " branch
-set statusline+=\ c%c        " Current column
-set statusline+=\ %m      " is modified
-set statusline+=[B%n] " buffer number
-
-set splitbelow
-set splitright
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-autocmd VimEnter * IndentGuidesEnable
