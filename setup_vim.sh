@@ -9,22 +9,16 @@ curl -LSso ~/vimfiles/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 cd ~/vimfiles/bundle
 
 git clone https://github.com/kien/ctrlp.vim
-git clone https://github.com/scrooloose/nerdtree
-git clone https://github.com/scrooloose/syntastic
 git clone https://github.com/tpope/vim-surround
-git clone https://github.com/tpope/vim-repeat
-git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/tpope/vim-sensible
 
 git clone https://github.com/ntpeters/vim-better-whitespace
-git clone https://github.com/cohama/lexima.vim
 git clone https://github.com/nathanaelkane/vim-indent-guides
 
 git clone https://github.com/joukevandermaas/vim-ember-hbs
 git clone https://github.com/isRuslan/vim-es6
 git clone https://github.com/jelera/vim-javascript-syntax
 git clone https://github.com/PProvost/vim-ps1
-git clone https://github.com/elzr/vim-json
 
 git clone https://github.com/morhetz/gruvbox
 git clone https://github.com/sjl/badwolf
