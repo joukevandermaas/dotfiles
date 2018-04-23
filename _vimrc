@@ -47,7 +47,7 @@ colorscheme badwolf
 set linebreak " break on words
 
 let mapleader="\<space>"
-set clipboard=unnamed " Allow copy/paste from windows clipboard using y/p
+set clipboard=unnamedplus " Allow copy/paste from clipboard using y/p
 
 set hidden  " Hides old buffers with unsaved changes when opening a new one
 
@@ -92,7 +92,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set undofile                " Save undo's after file closes
-set undodir=$HOME/vimfiles/undo " where to save undo histories
+set undodir=~/.vim/undo " where to save undo histories
 au BufRead,BufNewFile *.md set filetype=markdown
 
 nnoremap <leader>t za
