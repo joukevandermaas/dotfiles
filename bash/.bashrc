@@ -8,7 +8,7 @@
 source /usr/share/git/completion/git-prompt.sh
 
 alias ls='ls --color=auto'
-alias searchpkg='sudo pacman -Ss'
+alias findpkg='sudo pacman -Ss'
 alias installpkg='sudo pacman -S'
 
 #PS1='\e[1m[\u \W]\$\e[0m '
